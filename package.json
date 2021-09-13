@@ -1,11 +1,11 @@
 {
-  "name": "demo-webdriverio-mocha",
+  "name": "webdriver-mocha",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git@github.com:WarleyGabriel/demo-webdriverio-mocha.git"
+    "url": "https://github.com/logesh14/test-automation.git"
   },
-  "author": "Logesh",
+  "author": "Logesh Elangovan",
   "scripts": {
     "build": "npx del ./dist ./screenshot && mkdir screenshot && npx tsc",
     "report:generate": "npx allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
