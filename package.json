@@ -8,8 +8,10 @@
   "author": "Logesh",
   "scripts": {
     "build": "npx del ./dist ./screenshot && mkdir screenshot && npx tsc",
-    "tests:wdio": "npx wdio ./dist/wdio.conf.js --spec ./dist/test/specs/volvo/**.*.js",
-    "tests:mocha": "npx mocha --timeout 10000 --spec dist/test/specs/**/*.js"
+    "report:generate": "npx allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
+    "report:open": "npx allure open test-report/allure-report",
+    "tests:wdio": "npx del test-report && wdio ./dist/wdio.conf.js --spec ./dist/test/specs/volvo/**.*.js",
+    "tests:mocha": "npx del test-report && mocha --timeout 10000 --spec dist/test/specs/**/*.js"
   },
   "dependencies": {
     "@types/chai": "^4.2.21",

@@ -132,9 +132,18 @@ export const config: WebdriverIO.Config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
 
-
+    reporters: [
+        'spec',
+        [
+            'allure',
+            {
+                outputDir: './test-report/allure-result/',
+                disableWebdriverStepsReporting: true,
+                disableWebdriverScreenshotsReporting: false,
+            },
+        ],
+    ],
     
     //
     // Options to be passed to Mocha.
@@ -143,6 +152,8 @@ export const config: WebdriverIO.Config = {
         ui: 'bdd',
         timeout: 60000
     },
+
+    
     //
     // =====
     // Hooks
