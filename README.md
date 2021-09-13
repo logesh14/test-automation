@@ -32,3 +32,15 @@ npm run tests:mocha
  
 ```
 
+Run alure tests:
+
+```bash
+npm run report:generate
+```
+
+
+Open alure tests:
+
+```bash
+npm run report:open
+```
