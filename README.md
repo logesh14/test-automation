@@ -25,7 +25,7 @@ Run wdio tests:
 ```bash
 npm run tests:wdio
 ```
-Run wdio tests:
+Run mocha tests:
 
 ```bash
 npm run tests:mocha
