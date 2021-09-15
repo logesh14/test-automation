@@ -25,10 +25,22 @@ Run wdio tests:
 ```bash
 npm run tests:wdio
 ```
-Run wdio tests:
+Run mocha tests:
 
 ```bash
 npm run tests:mocha
  
 ```
 
+Run alure tests:
+
+```bash
+npm run report:generate
+```
+
+
+Open alure tests:
+
+```bash
+npm run report:open
+```
