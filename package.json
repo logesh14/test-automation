@@ -8,10 +8,14 @@
   "author": "Logesh Elangovan",
   "scripts": {
     "build": "npx del ./dist ./screenshot && mkdir screenshot && npx tsc",
+    "tests:all": "npx del test-report && wdio ./dist/wdio.conf.js --spec ./dist/test/specs/**/*.js",
+    "tests:volvo-wdio": "npx del test-report && wdio ./dist/wdio.conf.js --spec ./dist/test/specs/volvo/**/*.js",
+    "tests:webio-wdio": "npx del test-report && wdio ./dist/wdio.conf.js --spec ./dist/test/specs/webdriverio/**/*.js",
+    "tests:volvo-mocha": "npx del test-report && mocha --timeout 10000 --spec dist/test/specs/volvo/**/*.js",
+    "tests:webio-mocha": "npx del test-report && mocha --timeout 20000 --spec dist/test/specs/webdriverio/**/*.js",
     "report:generate": "npx allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
-    "report:open": "npx allure open test-report/allure-report",
-    "tests:wdio": "npx del test-report && wdio ./dist/wdio.conf.js --spec ./dist/test/specs/volvo/**.*.js",
-    "tests:mocha": "npx del test-report && mocha --timeout 10000 --spec dist/test/specs/**/*.js"
+    "report:open": "npx allure open test-report/allure-report"
+
   },
   "dependencies": {
     "@types/chai": "^4.2.21",

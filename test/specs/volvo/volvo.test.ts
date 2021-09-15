@@ -1,16 +1,15 @@
 const { remote } = require('webdriverio');
 import {  expect } from 'chai';
 import * as request from 'https'
+import { VOLVO_HOME_PAGE_URL } from '../url';
 
 (async () => {
-
-    const HOME_PAGE_URL = "https://www.volvocars.com/intl/v/car-safety/a-million-more"
 
     describe('page ping test', () => {
 
     it('Home page url should return response code 200', () => {
 
-        request.get(HOME_PAGE_URL, (res: any) => {
+        request.get(VOLVO_HOME_PAGE_URL, (res: any) => {
             expect(res.statusCode).to.equal(200);
 
         });
@@ -29,7 +28,7 @@ import * as request from 'https'
                 }
             })
 
-            await browser.url(HOME_PAGE_URL)
+            await browser.url(VOLVO_HOME_PAGE_URL)
 
             
             let cookies_setting: any = await browser.$('/html/body/div[1]/div[2]/div[4]/div[3]/div/button')
