@@ -20,15 +20,21 @@ Compile TypeScript:
 ```bash
 npm run build
 ```
-Run wdio tests:
+Run all tests:
 
 ```bash
-npm run tests:wdio
+npm run tests:all
 ```
-Run mocha tests:
+Run volvo module mocha tests:
 
 ```bash
-npm run tests:mocha
+npm run tests:volvo-mocha
+ 
+```
+Run webio module mocha tests:
+
+```bash
+npm run tests:webio-mocha
  
 ```
 
